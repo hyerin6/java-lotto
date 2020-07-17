@@ -80,7 +80,7 @@ public class LottoMachine {
 		return ranks;
 	}
 
-	public static double getProfit(List<Rank> ranks) {
+	private static double getProfit(List<Rank> ranks) {
 		int profit = 0;
 		int size = ranks.size();
 
@@ -95,7 +95,7 @@ public class LottoMachine {
 		System.out.println("총 수익률은 " + getProfit(ranks)/money + "입니다.");
 	}
 
-	public static int getWinningCount(Map<Integer, Integer> countMap, int winningMoney) {
+	private static int getWinningCount(Map<Integer, Integer> countMap, int winningMoney) {
 		return countMap.get(winningMoney) == null ? 0 : countMap.get(winningMoney);
 	}
 
